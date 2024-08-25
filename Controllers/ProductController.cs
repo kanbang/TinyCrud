@@ -8,7 +8,7 @@ namespace Tiny.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class ProductController : BaseController<ProductDto, Product>
+    public class ProductController : BaseController<ProductDto, Product, ProductDto, ProductDto, ProductFilterDto>
     {
         public ProductController(ProductService service) : base(service)
         {

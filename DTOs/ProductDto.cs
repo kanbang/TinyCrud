@@ -8,4 +8,13 @@ namespace Tiny.DTOs
         public string Name { get; set; }
         public decimal Price { get; set; }
     }
+
+
+    public class ProductFilterDto
+    {
+
+        public int? Id { get; set; }
+        public string? Name { get; set; }
+        public decimal? Price { get; set; }
+    }
 }

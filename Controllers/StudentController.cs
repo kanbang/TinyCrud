@@ -8,9 +8,9 @@ namespace Tiny.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class StudentController : BaseController<StudentDto, Student>
+    public class StudentController : BaseController<StudentDto, Student, StudentDto, StudentDto, StudentDto>
     {
-        public StudentController(IBaseService<StudentDto, Student> service) : base(service)
+        public StudentController(IBaseService<StudentDto, Student, StudentDto, StudentDto, StudentDto> service) : base(service)
         {
         }
     }

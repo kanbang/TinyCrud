@@ -8,7 +8,7 @@ using Tiny.Repositories;
 
 namespace Tiny.Services
 {
-    public class ProductService : BaseService<ProductDto, Product>
+    public class ProductService : BaseService<ProductDto, Product, ProductDto, ProductDto, ProductFilterDto>
     {
         public ProductService(ProductRepository repository, IMapper mapper)
             : base(repository, mapper)

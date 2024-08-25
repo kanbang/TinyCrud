@@ -11,7 +11,7 @@ namespace CRUD
             // Register all derived classes of BaseService
             services.Scan(scan => scan
                 .FromAssemblies(AppDomain.CurrentDomain.GetAssemblies())
-                .AddClasses(classes => classes.AssignableTo(typeof(BaseService<,>)))
+                .AddClasses(classes => classes.AssignableTo(typeof(BaseService<,,,,>)))
                 .AsSelfWithInterfaces()
                 .WithScopedLifetime()
             );
@@ -26,7 +26,7 @@ namespace CRUD
 
             // 添加泛型服务
             services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
-            services.AddScoped(typeof(IBaseService<,>), typeof(BaseService<,>));
+            services.AddScoped(typeof(IBaseService<,,,,>), typeof(BaseService<,,,,>));
 
             return services;
         }
