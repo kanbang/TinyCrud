@@ -27,6 +27,4 @@ namespace Tiny.Profiles
             }
         }
     }
-
-
 }
