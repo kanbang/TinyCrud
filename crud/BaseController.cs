@@ -15,25 +15,24 @@ namespace CRUD
         where TUpdateDto : class
         where TFilterDto : class
     {
-        private readonly IBaseService<TDto, TEntity, TCreateDto, TUpdateDto, TFilterDto> _service;
+        // private readonly IBaseService<TDto, TEntity, TCreateDto, TUpdateDto, TFilterDto> _service;
 
-        public BaseController(IBaseService<TDto, TEntity, TCreateDto, TUpdateDto, TFilterDto> service)
+        // [Autowired]
+        protected IBaseService<TDto, TEntity, TCreateDto, TUpdateDto, TFilterDto> Service { get; set; }
+
+        public BaseController(IBaseService<TDto, TEntity, TCreateDto, TUpdateDto, TFilterDto>? service = null)
         {
-            // _service = service;
-            // Use dynamic filter type if TFilterDto is Default
-            var filterDtoType = typeof(TFilterDto) == typeof(TDefault)
-                                ? CreateFilterDtoType(typeof(TDto))
-                                : typeof(TFilterDto);
-
-            // Initialize service with dynamic filter DTO type
-            _service = (IBaseService<TDto, TEntity, TCreateDto, TUpdateDto, TFilterDto>)service;
-
+            if (service != null)
+            {
+                Service = service;
+            }
         }
+
 
         [HttpGet("{id}")]
         public async Task<ActionResult<TDto>> GetById(int id)
         {
-            var dto = await _service.GetByIdAsync(id);
+            var dto = await Service.GetByIdAsync(id);
             if (dto == null)
                 return NotFound();
             return Ok(dto);
@@ -42,28 +41,28 @@ namespace CRUD
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TDto>>> GetAll()
         {
-            var dtos = await _service.GetAllAsync();
+            var dtos = await Service.GetAllAsync();
             return Ok(dtos);
         }
 
         [HttpPost("filter")]
         public async Task<ActionResult<IEnumerable<TDto>>> Filter(TFilterDto filter)
         {
-            var dtos = await _service.FilterAsync(filter);
+            var dtos = await Service.FilterAsync(filter);
             return Ok(dtos);
         }
 
         [HttpPost]
         public async Task<ActionResult<TDto>> Create([FromBody] TCreateDto createDto)
         {
-            var dto = await _service.CreateAsync(createDto);
+            var dto = await Service.CreateAsync(createDto);
             return CreatedAtAction(nameof(GetById), new { id = dto.Id }, dto);
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] TUpdateDto updateDto)
         {
-            var dto = await _service.UpdateAsync(id, updateDto);
+            var dto = await Service.UpdateAsync(id, updateDto);
             if (dto == null)
                 return NotFound();
             return Ok(dto);
@@ -72,15 +71,55 @@ namespace CRUD
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var existing = await _service.GetByIdAsync(id);
+            var existing = await Service.GetByIdAsync(id);
             if (existing == null)
                 return NotFound();
 
-            await _service.DeleteAsync(id);
+            await Service.DeleteAsync(id);
             return NoContent();
         }
+    }
+
+    // public interface ISRD<TItem>: ISRD<TItem, Guid> { }
 
 
+    public class BaseController<TDto, TEntity> : BaseController<TDto, TEntity, TDto, TDto, TDto>
+            where TDto : class, IBaseDto
+            where TEntity : class, IBaseEntity
+    {
+        public BaseController(IBaseService<TDto, TEntity, TDto, TDto, TDto>? service = null) : base(service)
+        {
+        }
+    }
+
+
+    public class BaseController<TDto, TEntity, TCreateDto> : BaseController<TDto, TEntity, TCreateDto, TDto, TDto>
+            where TDto : class, IBaseDto
+            where TEntity : class, IBaseEntity
+            where TCreateDto : class
+    {
+        public BaseController(IBaseService<TDto, TEntity, TCreateDto, TDto, TDto>? service = null) : base(service)
+        {
+        }
+    }
+
+
+    public class BaseController<TDto, TEntity, TCreateDto, TUpdateDto> : BaseController<TDto, TEntity, TCreateDto, TUpdateDto, TDto>
+            where TDto : class, IBaseDto
+            where TEntity : class, IBaseEntity
+            where TCreateDto : class
+            where TUpdateDto : class
+    {
+        public BaseController(IBaseService<TDto, TEntity, TCreateDto, TUpdateDto, TDto>? service = null) : base(service)
+        {
+        }
+    }
+
+
+
+    // C#在编译器无法使用反射，无法应用在泛型参数
+    class Utils
+    {
         public static Type CreateFilterDtoType(Type dtoType)
         {
             var assemblyName = new AssemblyName("DynamicFilterDtoAssembly");
@@ -127,40 +166,6 @@ namespace CRUD
             // 创建类型
             return typeBuilder.CreateTypeInfo().AsType();
         }
-
     }
 
-    // public interface ISRD<TItem>: ISRD<TItem, Guid> { }
-    public class TDefault { }
-    public class BaseController<TDto, TEntity> : BaseController<TDto, TEntity, TDefault, TDefault, TDefault>
-            where TDto : class, IBaseDto
-            where TEntity : class, IBaseEntity
-    {
-        public BaseController(IBaseService<TDto, TEntity, TDefault, TDefault, TDefault> service) : base(service)
-        {
-        }
-    }
-
-
-    public class BaseController<TDto, TEntity, TCreateDto> : BaseController<TDto, TEntity, TCreateDto, TDefault, TDefault>
-            where TDto : class, IBaseDto
-            where TEntity : class, IBaseEntity
-            where TCreateDto : class
-    {
-        public BaseController(IBaseService<TDto, TEntity, TCreateDto, TDefault, TDefault> service) : base(service)
-        {
-        }
-    }
-
-
-    public class BaseController<TDto, TEntity, TCreateDto, TUpdateDto> : BaseController<TDto, TEntity, TCreateDto, TUpdateDto, TDefault>
-            where TDto : class, IBaseDto
-            where TEntity : class, IBaseEntity
-            where TCreateDto : class
-            where TUpdateDto : class
-    {
-        public BaseController(IBaseService<TDto, TEntity, TCreateDto, TUpdateDto, TDefault> service) : base(service)
-        {
-        }
-    }
 }

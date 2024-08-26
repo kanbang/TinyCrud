@@ -12,20 +12,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<TinyDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-
 // 添加 AutoMapper
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
 
 // 将 DbContext 映射到 TinyDbContext
 builder.Services.AddScoped<DbContext, TinyDbContext>();  
 
-
 // Add CRUD services
 builder.Services.AddCrudServices();
-
-// 添加特定服务
-// builder.Services.AddScoped<ProductService>();
 
 // 添加控制器
 builder.Services.AddControllers();
