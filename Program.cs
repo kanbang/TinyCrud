@@ -5,6 +5,8 @@ using Tiny.Data;
 using Scrutor;
 using Tiny.Services;
 using Tiny.Repositories;
+using Tiny.DTOs;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,10 +18,24 @@ builder.Services.AddDbContext<TinyDbContext>(options =>
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 // 将 DbContext 映射到 TinyDbContext
-builder.Services.AddScoped<DbContext, TinyDbContext>();  
+builder.Services.AddScoped<DbContext, TinyDbContext>();
 
 // Add CRUD services
 builder.Services.AddCrudServices();
+
+// 注册 JsonFileService 服务
+
+
+// builder.Services.AddSingleton<IJsonFileService>(provider =>
+// {
+//     // 初始化服务并传入JSON文件路径
+//     return new JsonFileService<JsonClass>("settings.json");
+
+// });
+
+builder.Services.AddSingleton<IJsonFileService<JsonClass>>(sp =>
+      new JsonFileService<JsonClass>("settings.json"));
+
 
 // 添加控制器
 builder.Services.AddControllers();
