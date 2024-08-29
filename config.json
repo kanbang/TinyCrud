@@ -1,0 +1,1966 @@
+{
+  "DayAgeWeatherCurve": [
+    {
+      "DayAge": 1,
+      "HumidityHeatCompCoefficient": 0.1,
+      "AirCoolingCompCoefficient": 0.12,
+      "CO2UpperLimit": 2000,
+      "CO2LowerLimit": 400,
+      "NH3UpperLimit": 1500,
+      "HeatStressIndex": 1.01,
+      "TargetHumidity": 50.1
+    },
+    {
+      "DayAge": 2,
+      "HumidityHeatCompCoefficient": 0.12,
+      "AirCoolingCompCoefficient": 0.21,
+      "CO2UpperLimit": 2100,
+      "CO2LowerLimit": 420,
+      "NH3UpperLimit": 1530,
+      "HeatStressIndex": 1.21,
+      "TargetHumidity": 49.2
+    }
+  ],
+  "DayAgeRespiratoryCapacityCurve": [
+    {
+      "DayAge": 1,
+      "List": [
+        {
+          "OutdoorTemp": -20,
+          "TargetValue": 0.21
+        },
+        {
+          "OutdoorTemp": -10,
+          "TargetValue": 0.3
+        },
+        {
+          "OutdoorTemp": 0,
+          "TargetValue": 0.41
+        },
+        {
+          "OutdoorTemp": 10,
+          "TargetValue": 0.52
+        },
+        {
+          "OutdoorTemp": 20,
+          "TargetValue": 0.66
+        },
+        {
+          "OutdoorTemp": 30,
+          "TargetValue": 0.68
+        }
+      ]
+    },
+    {
+      "DayAge": 3,
+      "List": [
+        {
+          "OutdoorTemp": -20,
+          "TargetValue": null
+        },
+        {
+          "OutdoorTemp": -10,
+          "TargetValue": 0.32
+        },
+        {
+          "OutdoorTemp": 0,
+          "TargetValue": 0.45
+        },
+        {
+          "OutdoorTemp": 10,
+          "TargetValue": 0.54
+        },
+        {
+          "OutdoorTemp": 20,
+          "TargetValue": 0.68
+        },
+        {
+          "OutdoorTemp": 30,
+          "TargetValue": 0.7
+        }
+      ]
+    },
+    {
+      "DayAge": 5,
+      "List": [
+        {
+          "OutdoorTemp": -20,
+          "TargetValue": 0.27
+        },
+        {
+          "OutdoorTemp": -10,
+          "TargetValue": 0.36
+        },
+        {
+          "OutdoorTemp": 0,
+          "TargetValue": 0.47
+        },
+        {
+          "OutdoorTemp": 10,
+          "TargetValue": 0.58
+        },
+        {
+          "OutdoorTemp": 20,
+          "TargetValue": 0.7
+        },
+        {
+          "OutdoorTemp": 30,
+          "TargetValue": 0.74
+        }
+      ]
+    }
+  ],
+  "DayAgeWeightCurve": [
+    {
+      "DayAge": 2,
+      "Weight": 5.0
+    },
+    {
+      "DayAge": 4,
+      "Weight": 6.0
+    }
+  ],
+  "WetCurtainConfig": {
+    "CycleTime": 250,
+    "WetCurtainConfigInfoList": [
+      {
+        "LevelName": "档位1",
+        "Sort": 1,
+        "TemperatureDifference": 0.2,
+        "StartDayAge": 1,
+        "StartTime": "09:10",
+        "StopTime": "10:10",
+        "MaxHumidityLimit": 50.0,
+        "MinWindSpeedLimit": 20,
+        "MinOutdoorTempLimit": -1.0,
+        "OpenDuration": 150,
+        "CloseDuration": 100,
+        "WetCurtainList": [
+          {
+            "Name": "湿帘1",
+            "IsActive": true
+          },
+          {
+            "Name": "湿帘2",
+            "IsActive": false
+          },
+          {
+            "Name": "湿帘3",
+            "IsActive": false
+          },
+          {
+            "Name": "湿帘4",
+            "IsActive": false
+          }
+        ]
+      },
+      {
+        "LevelName": "档位2",
+        "Sort": 2,
+        "TemperatureDifference": 0.5,
+        "StartDayAge": 3,
+        "StartTime": "10:30",
+        "StopTime": "11:30",
+        "MaxHumidityLimit": 0.0,
+        "MinWindSpeedLimit": 0,
+        "MinOutdoorTempLimit": 0.0,
+        "OpenDuration": 200,
+        "CloseDuration": 100,
+        "WetCurtainList": [
+          {
+            "Name": "湿帘1",
+            "IsActive": true
+          },
+          {
+            "Name": "湿帘2",
+            "IsActive": true
+          },
+          {
+            "Name": "湿帘3",
+            "IsActive": false
+          },
+          {
+            "Name": "湿帘4",
+            "IsActive": false
+          }
+        ]
+      },
+      {
+        "LevelName": "档位3",
+        "Sort": 3,
+        "TemperatureDifference": 1.0,
+        "StartDayAge": 3,
+        "StartTime": "15:49",
+        "StopTime": "15:49",
+        "MaxHumidityLimit": 50.7,
+        "MinWindSpeedLimit": 2,
+        "MinOutdoorTempLimit": -2.1,
+        "OpenDuration": 200,
+        "CloseDuration": 100,
+        "WetCurtainList": [
+          {
+            "Name": "湿帘1",
+            "IsActive": true
+          },
+          {
+            "Name": "湿帘2",
+            "IsActive": true
+          },
+          {
+            "Name": "湿帘3",
+            "IsActive": true
+          },
+          {
+            "Name": "湿帘4",
+            "IsActive": false
+          }
+        ]
+      },
+      {
+        "LevelName": "档位4",
+        "Sort": 4,
+        "TemperatureDifference": 1.5,
+        "StartDayAge": 3,
+        "StartTime": "16:49",
+        "StopTime": "17:49",
+        "MaxHumidityLimit": 50.7,
+        "MinWindSpeedLimit": 2,
+        "MinOutdoorTempLimit": -2.1,
+        "OpenDuration": 200,
+        "CloseDuration": 100,
+        "WetCurtainList": [
+          {
+            "Name": "湿帘1",
+            "IsActive": true
+          },
+          {
+            "Name": "湿帘2",
+            "IsActive": true
+          },
+          {
+            "Name": "湿帘3",
+            "IsActive": true
+          },
+          {
+            "Name": "湿帘4",
+            "IsActive": true
+          }
+        ]
+      }
+    ]
+  },
+  "ApparentTemperatureConfig": {
+    "HumidityHeatCompConfig": {
+      "IsActive": true,
+      "StartDayAge": 0,
+      "StopDayAge": 10,
+      "StartTime": "10:07",
+      "StopTime": "11:07",
+      "CompHumidityUpperLimit": 60.0,
+      "CompHumidityLowerLimit": 10.0,
+      "HumidityHysteresis": 2.0,
+      "ReactionTime": 0,
+      "MaxCompensationTemp": 0.0
+    },
+    "AirCooledCompConfig": {
+      "IsActive": true,
+      "IsTunnelVentilationActive": true,
+      "StartDayAge": 0,
+      "StopDayAge": 10,
+      "StartTime": "10:07",
+      "StopTime": "12:07"
+    }
+  },
+  "HeatStressIndexConfig": {
+    "IsActive": true,
+    "AlarmValue": 155
+  },
+  "WaterLineConfig": {
+    "WaterShortageAlarm": 100.0,
+    "WaterLeakageAlarm": 2.0,
+    "LightOffWaterLevel": 100.0
+  },
+  "FeedConfig": {
+    "SupplementaryFeedSurplus": 60.0,
+    "AlarmSurplus": 40.0,
+    "IsActiveFeedSignal": true
+  },
+  "DayAgeFeedConfig": [
+    {
+      "DayAge": 1,
+      "FeedItems": [
+        {
+          "OpenTime": "09:10",
+          "CloseTime": "09:40",
+          "FeedRate": 10.02,
+          "FeedLineSensorList": [
+            {
+              "Name": "料线1",
+              "IsActive": true
+            },
+            {
+              "Name": "料线2",
+              "IsActive": false
+            },
+            {
+              "Name": "料线3",
+              "IsActive": true
+            },
+            {
+              "Name": "料线4",
+              "IsActive": true
+            }
+          ]
+        },
+        {
+          "OpenTime": "19:49",
+          "CloseTime": "20:50",
+          "FeedRate": 10.02,
+          "FeedLineSensorList": [
+            {
+              "Name": "料线2",
+              "IsActive": false
+            },
+            {
+              "Name": "料线3",
+              "IsActive": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "DayAge": 7,
+      "FeedItems": [
+        {
+          "OpenTime": "11:00",
+          "CloseTime": "11:30",
+          "FeedRate": 10.02,
+          "FeedLineSensorList": [
+            {
+              "Name": "料线1",
+              "IsActive": true
+            },
+            {
+              "Name": "料线4",
+              "IsActive": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "DayAgeVentilationCurve": [
+    {
+      "DayAge": 1,
+      "List": [
+        {
+          "TempDiff": -2,
+          "TempDiffValue": 2000
+        },
+        {
+          "TempDiff": -1.5,
+          "TempDiffValue": 4000
+        },
+        {
+          "TempDiff": -1,
+          "TempDiffValue": 6000
+        },
+        {
+          "TempDiff": -0.5,
+          "TempDiffValue": 8000
+        },
+        {
+          "TempDiff": 0,
+          "TempDiffValue": 9000
+        },
+        {
+          "TempDiff": 0.5,
+          "TempDiffValue": 10000
+        },
+        {
+          "TempDiff": 1,
+          "TempDiffValue": 12000
+        },
+        {
+          "TempDiff": 1.5,
+          "TempDiffValue": 14000
+        },
+        {
+          "TempDiff": 2,
+          "TempDiffValue": 16000
+        }
+      ]
+    },
+    {
+      "DayAge": 2,
+      "List": [
+        {
+          "TempDiff": -2,
+          "TempDiffValue": 3000
+        },
+        {
+          "TempDiff": -1.5,
+          "TempDiffValue": 5000
+        },
+        {
+          "TempDiff": -1,
+          "TempDiffValue": 7000
+        },
+        {
+          "TempDiff": -0.5,
+          "TempDiffValue": 9000
+        },
+        {
+          "TempDiff": 0,
+          "TempDiffValue": 10000
+        },
+        {
+          "TempDiff": 0.5,
+          "TempDiffValue": 11000
+        },
+        {
+          "TempDiff": 1,
+          "TempDiffValue": 12000
+        },
+        {
+          "TempDiff": 1.5,
+          "TempDiffValue": 14000
+        },
+        {
+          "TempDiff": 2,
+          "TempDiffValue": 16000
+        }
+      ]
+    }
+  ],
+  "GasConfig": [
+    {
+      "GasType": 0,
+      "GasName": null,
+      "StartTime": "08:30",
+      "StopTime": "09:00",
+      "UpperLimitDeviation": 11,
+      "UpperLimit": 1,
+      "ExceedUpperLimitAirVolumeAdd": 0,
+      "LowerLimitDeviation": 11,
+      "LowerLimit": 0,
+      "UnderUpperLimitAirVolumeReduce": 0
+    },
+    {
+      "GasType": 1,
+      "GasName": null,
+      "StartTime": "10:07",
+      "StopTime": "11:07",
+      "UpperLimitDeviation": 0,
+      "UpperLimit": 0,
+      "ExceedUpperLimitAirVolumeAdd": 0,
+      "LowerLimitDeviation": null,
+      "LowerLimit": null,
+      "UnderUpperLimitAirVolumeReduce": null
+    }
+  ],
+  "LongitudinalVentilationConfig": [
+    {
+      "Id": 1,
+      "LevelName": "档位1",
+      "LevelAirVolume": 485,
+      "StartTempDeviation": 2.3,
+      "OpenDuration": 5,
+      "VenFanUnitList": [
+        {
+          "Name": "风机组1",
+          "TotalAirVolume": 10000,
+          "OperatingMode": 0
+        },
+        {
+          "Name": "风机组2",
+          "TotalAirVolume": 9700,
+          "OperatingMode": 1
+        }
+      ]
+    },
+    {
+      "Id": 2,
+      "LevelName": "档位2",
+      "LevelAirVolume": 970,
+      "StartTempDeviation": 7.2,
+      "OpenDuration": 10,
+      "VenFanUnitList": [
+        {
+          "Name": "风机组1",
+          "TotalAirVolume": 10000,
+          "OperatingMode": 0
+        },
+        {
+          "Name": "风机组2",
+          "TotalAirVolume": 9700,
+          "OperatingMode": 1
+        }
+      ]
+    }
+  ],
+  "LongitudinalVentilationStrategyConfig": {
+    "CycleTime": 100,
+    "ExitTempDeviation": 0,
+    "OutLowTempLimitDeviation": -20,
+    "OutHighTempLimitDeviation": 2,
+    "AlternateRunNum": 0
+  },
+  "IlluminationConfig": [
+    {
+      "DayAge": 1,
+      "IlluminationItems": [
+        {
+          "OpenTime": "09:10",
+          "CloseTime": "09:40",
+          "FloodLightList": [
+            {
+              "Brightness": 10,
+              "Name": "照明1",
+              "IsActive": true
+            },
+            {
+              "Brightness": 0,
+              "Name": "照明2",
+              "IsActive": false
+            },
+            {
+              "Brightness": 10,
+              "Name": "照明3",
+              "IsActive": true
+            },
+            {
+              "Brightness": 0,
+              "Name": "照明4",
+              "IsActive": false
+            }
+          ]
+        },
+        {
+          "OpenTime": "15:40",
+          "CloseTime": "16:00",
+          "FloodLightList": [
+            {
+              "Brightness": 10,
+              "Name": "照明1",
+              "IsActive": true
+            },
+            {
+              "Brightness": 10,
+              "Name": "照明2",
+              "IsActive": true
+            },
+            {
+              "Brightness": 0,
+              "Name": "照明3",
+              "IsActive": false
+            },
+            {
+              "Brightness": 10,
+              "Name": "照明4",
+              "IsActive": true
+            }
+          ]
+        },
+        {
+          "OpenTime": "16:20",
+          "CloseTime": "16:40",
+          "FloodLightList": [
+            {
+              "Brightness": 0,
+              "Name": "照明3",
+              "IsActive": true
+            },
+            {
+              "Brightness": 0,
+              "Name": "照明5",
+              "IsActive": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "DayAge": 4,
+      "IlluminationItems": [
+        {
+          "OpenTime": "10:30",
+          "CloseTime": "11:00",
+          "FloodLightList": [
+            {
+              "Brightness": 0,
+              "Name": "照明1",
+              "IsActive": false
+            },
+            {
+              "Brightness": 10,
+              "Name": "照明2",
+              "IsActive": true
+            },
+            {
+              "Brightness": 10,
+              "Name": "照明3",
+              "IsActive": true
+            },
+            {
+              "Brightness": 0,
+              "Name": "照明4",
+              "IsActive": false
+            }
+          ]
+        },
+        {
+          "OpenTime": "11:30",
+          "CloseTime": "12:00",
+          "FloodLightList": [
+            {
+              "Brightness": 0,
+              "Name": "照明3",
+              "IsActive": false
+            },
+            {
+              "Brightness": 0,
+              "Name": "照明5",
+              "IsActive": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "DehumidificationConfig": {
+    "EnabledStatus": false,
+    "WHStopDisposeHumidity": false,
+    "UnderHeatStopDisposeHumidity": false,
+    "StartDisposeHumidityDeviation": 0.1,
+    "StopDisposeHumidityDeviation": 0.1,
+    "DisposeHumidityAirVolumeAdd": 0
+  },
+  "TimedSprayingConfig": [
+    {
+      "LevelName": "1",
+      "StopTempDeviation": 0.5,
+      "StopTemp": 0.0,
+      "StopHumidityDeviation": 0,
+      "StopHumidity": 0,
+      "StartTime": "09:15",
+      "StopTime": "09:40",
+      "OpenDuration": 200,
+      "CloseDuration": 0
+    },
+    {
+      "LevelName": "2",
+      "StopTempDeviation": 1.5,
+      "StopTemp": 0.0,
+      "StopHumidityDeviation": 0,
+      "StopHumidity": 0,
+      "StartTime": "19:10",
+      "StopTime": "19:20",
+      "OpenDuration": 10,
+      "CloseDuration": 0
+    }
+  ],
+  "StirringFanConfig": {
+    "MinRunTime": 300,
+    "StirringFanConfigList": [
+      {
+        "Equipment": "搅拌风机1",
+        "SpaceTimeFanSync": true,
+        "SpaceTimeFanAsync": false,
+        "HeatSync": true,
+        "Continue": false,
+        "RangeModel": true,
+        "RoomTempDiff": false,
+        "SensorsDiff": false,
+        "MinSpeed": 20,
+        "MaxSpeed": 80,
+        "TempZone": 5,
+        "SpeedMinChange": 10,
+        "SpeedMaxChange": 30,
+        "StartDayAge": 1,
+        "StopDayAge": 30,
+        "StartTime": "16:30",
+        "StopTime": "17:10",
+        "StartAirVolume": 8000,
+        "StopAirVolume": 22000
+      },
+      {
+        "Equipment": "搅拌风机2",
+        "SpaceTimeFanSync": true,
+        "SpaceTimeFanAsync": false,
+        "HeatSync": false,
+        "Continue": false,
+        "RangeModel": true,
+        "RoomTempDiff": false,
+        "SensorsDiff": false,
+        "MinSpeed": 20,
+        "MaxSpeed": 80,
+        "TempZone": 5,
+        "SpeedMinChange": 10,
+        "SpeedMaxChange": 30,
+        "StartDayAge": 1,
+        "StopDayAge": 30,
+        "StartTime": "09:00",
+        "StopTime": "10:30",
+        "StartAirVolume": 8500,
+        "StopAirVolume": 23000
+      }
+    ]
+  },
+  "HeatingConfig": {
+    "LowTemperatureHeatingConfig": {
+      "StopHeatingOutdoorTemp": 20.0,
+      "MinPower": 40.0,
+      "MinRunTime": 30
+    },
+    "NormalHeatingConfigList": [
+      {
+        "LevelName": "档位1",
+        "StartHeatingTempDiff": 0.0,
+        "HeatingTempBand": 0.3,
+        "FixedHeaterList": [
+          {
+            "OpeningPercentage": 0,
+            "Name": "定频加热1",
+            "IsActive": false
+          },
+          {
+            "OpeningPercentage": 0,
+            "Name": "定频加热2",
+            "IsActive": true
+          },
+          {
+            "OpeningPercentage": 0,
+            "Name": "定频加热3",
+            "IsActive": true
+          }
+        ],
+        "VariableHeaterList": [
+          {
+            "OpeningPercentage": 0,
+            "Name": "变频加热器1",
+            "IsActive": false
+          },
+          {
+            "OpeningPercentage": 20,
+            "Name": "变频加热器2",
+            "IsActive": true
+          }
+        ],
+        "Sort": 1
+      },
+      {
+        "LevelName": "档位2",
+        "StartHeatingTempDiff": -0.5,
+        "HeatingTempBand": 0.4,
+        "FixedHeaterList": [
+          {
+            "OpeningPercentage": 0,
+            "Name": "定频加热2",
+            "IsActive": false
+          },
+          {
+            "OpeningPercentage": 0,
+            "Name": "定频加热3",
+            "IsActive": true
+          }
+        ],
+        "VariableHeaterList": [
+          {
+            "OpeningPercentage": 30,
+            "Name": "变频加热器1",
+            "IsActive": true
+          },
+          {
+            "OpeningPercentage": 30,
+            "Name": "变频加热器2",
+            "IsActive": true
+          }
+        ],
+        "Sort": 2
+      }
+    ]
+  },
+  "VariableHeaterConfig": [
+    {
+      "Name": "变频加热器1",
+      "HeatingTempBand": 10.0,
+      "MinPowerPercentage": 10.0,
+      "MaxPowerPercentage": 20.0
+    },
+    {
+      "Name": "变频加热器2",
+      "HeatingTempBand": 3.0,
+      "MinPowerPercentage": 10.0,
+      "MaxPowerPercentage": 30.0
+    }
+  ],
+  "TransitionalVentilationLevelConfig": [
+    {
+      "Id": 1,
+      "LevelName": "档位2",
+      "AirVolume": [
+        1940,
+        9700
+      ],
+      "MinOpenDuration": 20,
+      "FanUnitList": [
+        {
+          "Name": "风机组1",
+          "TotalAirVolume": 10000,
+          "OperatingMode": 0
+        },
+        {
+          "Name": "风机组2",
+          "TotalAirVolume": 9700,
+          "OperatingMode": 1
+        }
+      ],
+      "Sort": 2
+    },
+    {
+      "Id": 2,
+      "LevelName": "档位1",
+      "AirVolume": [
+        1940,
+        0
+      ],
+      "MinOpenDuration": 20,
+      "FanUnitList": [
+        {
+          "Name": "风机组1",
+          "TotalAirVolume": 10000,
+          "OperatingMode": 0
+        },
+        {
+          "Name": "风机组2",
+          "TotalAirVolume": 9700,
+          "OperatingMode": 2
+        }
+      ],
+      "Sort": 1
+    },
+    {
+      "Id": 3,
+      "LevelName": "档位3",
+      "AirVolume": [
+        1940,
+        9700
+      ],
+      "MinOpenDuration": 20,
+      "FanUnitList": [
+        {
+          "Name": "风机组1",
+          "TotalAirVolume": 10000,
+          "OperatingMode": 0
+        },
+        {
+          "Name": "风机组2",
+          "TotalAirVolume": 9700,
+          "OperatingMode": 1
+        },
+        {
+          "Name": "风机组3",
+          "TotalAirVolume": 0,
+          "OperatingMode": 1
+        }
+      ],
+      "Sort": 3
+    }
+  ],
+  "TransitionalVentilationStrategyConfig": {
+    "CycleTime": 300,
+    "MaxVariation": 15,
+    "MinVariation": 1
+  },
+  "SprayCoolingConfig": {
+    "CycleTime": 300,
+    "SprayCoolingConfigList": [
+      {
+        "LevelName": "档位1",
+        "TemperatureDifference": 0.0,
+        "StopHumidityDeviation": 10,
+        "StartTime": "09:19",
+        "StopTime": "10:00",
+        "OpenDuration": 200,
+        "CloseDuration": 100,
+        "HumidifierList": [
+          {
+            "Name": "喷雾1",
+            "IsActive": true
+          },
+          {
+            "Name": "喷雾2",
+            "IsActive": false
+          }
+        ],
+        "Sort": 1
+      },
+      {
+        "LevelName": "档位2",
+        "TemperatureDifference": 0.5,
+        "StopHumidityDeviation": 10,
+        "StartTime": "12:00",
+        "StopTime": "13:00",
+        "OpenDuration": 250,
+        "CloseDuration": 50,
+        "HumidifierList": [
+          {
+            "Name": "喷雾1",
+            "IsActive": true
+          },
+          {
+            "Name": "喷雾2",
+            "IsActive": true
+          }
+        ],
+        "Sort": 2
+      }
+    ]
+  },
+  "SprayingHumidificationConfig": {
+    "CycleTime": 150,
+    "SprayingHumidificationConfigList": [
+      {
+        "LevelName": "档位1",
+        "StartHumidityDeviation": 0,
+        "StopHumidityDeviation": 10,
+        "StartTime": "09:29",
+        "StopTime": "10:10",
+        "OpenDuration": 100,
+        "CloseDuration": 50,
+        "HumidifierList": [
+          {
+            "Name": "喷雾1",
+            "IsActive": true
+          },
+          {
+            "Name": "喷雾2",
+            "IsActive": true
+          }
+        ],
+        "Sort": 1
+      },
+      {
+        "LevelName": "档位2",
+        "StartHumidityDeviation": -5,
+        "StopHumidityDeviation": 8,
+        "StartTime": "15:00",
+        "StopTime": "15:30",
+        "OpenDuration": 150,
+        "CloseDuration": 0,
+        "HumidifierList": [
+          {
+            "Name": "喷雾1",
+            "IsActive": true
+          },
+          {
+            "Name": "喷雾2",
+            "IsActive": true
+          }
+        ],
+        "Sort": 2
+      }
+    ]
+  },
+  "AirInletEquipmentConfig": [
+    {
+      "Name": "风窗1",
+      "MaxOpeningAngle": 90,
+      "MinOpeningAngle": 10,
+      "Quantity": 3,
+      "Width": 50.0,
+      "Height": 20.0,
+      "AirInletMode": 1
+    },
+    {
+      "Name": "风窗2",
+      "MaxOpeningAngle": 95,
+      "MinOpeningAngle": 5,
+      "Quantity": 5,
+      "Width": 50.0,
+      "Height": 20.0,
+      "AirInletMode": 2
+    },
+    {
+      "Name": "纵向风窗1",
+      "MaxOpeningAngle": 95,
+      "MinOpeningAngle": 5,
+      "Quantity": 5,
+      "Width": 50.0,
+      "Height": 20.0,
+      "AirInletMode": 2
+    },
+    {
+      "Name": "纵向风窗2",
+      "MaxOpeningAngle": 95,
+      "MinOpeningAngle": 5,
+      "Quantity": 5,
+      "Width": 50.0,
+      "Height": 20.0,
+      "AirInletMode": 1
+    }
+  ],
+  "AirInletTempCompConfig": [
+    {
+      "TemperatureDifference": -0.5,
+      "AirInletList": [
+        {
+          "Name": "风窗1",
+          "OpeningPercentage": 10,
+          "AirInletMode": 0,
+          "IsActive": true
+        },
+        {
+          "Name": "风窗2",
+          "OpeningPercentage": -20,
+          "AirInletMode": 0,
+          "IsActive": true
+        }
+      ]
+    },
+    {
+      "TemperatureDifference": 0.5,
+      "AirInletList": [
+        {
+          "Name": "风窗1",
+          "OpeningPercentage": 15,
+          "AirInletMode": 0,
+          "IsActive": true
+        },
+        {
+          "Name": "风窗2",
+          "OpeningPercentage": 20,
+          "AirInletMode": 0,
+          "IsActive": true
+        }
+      ]
+    }
+  ],
+  "FanAirInletConfig": [
+    {
+      "VentId": 1,
+      "LevelName": "档位1",
+      "VentilationMode": 0,
+      "AirInletList": [
+        {
+          "Name": "风窗1",
+          "IsActive": true,
+          "OpeningPercentage": 10,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗2",
+          "IsActive": true,
+          "OpeningPercentage": 15,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗3",
+          "IsActive": true,
+          "OpeningPercentage": 71,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗4",
+          "IsActive": true,
+          "OpeningPercentage": 21,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗5",
+          "IsActive": true,
+          "OpeningPercentage": 25,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗6",
+          "IsActive": true,
+          "OpeningPercentage": 30,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗7",
+          "IsActive": true,
+          "OpeningPercentage": 38,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "纵向风窗1",
+          "IsActive": true,
+          "OpeningPercentage": 18,
+          "AirInletMode": 0,
+          "AirInletType": 0
+        },
+        {
+          "Name": "纵向风窗2",
+          "IsActive": true,
+          "OpeningPercentage": 30,
+          "AirInletMode": 0,
+          "AirInletType": 0
+        },
+        {
+          "Name": "纵向风窗3",
+          "IsActive": true,
+          "OpeningPercentage": 50,
+          "AirInletMode": 0,
+          "AirInletType": 0
+        },
+        {
+          "Name": "纵向风窗4",
+          "IsActive": true,
+          "OpeningPercentage": 26,
+          "AirInletMode": 0,
+          "AirInletType": 0
+        }
+      ]
+    },
+    {
+      "VentId": 2,
+      "LevelName": "档位2",
+      "VentilationMode": 0,
+      "AirInletList": [
+        {
+          "Name": "风窗1",
+          "IsActive": true,
+          "OpeningPercentage": 32,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗2",
+          "IsActive": true,
+          "OpeningPercentage": 51,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗3",
+          "IsActive": true,
+          "OpeningPercentage": 20,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗4",
+          "IsActive": true,
+          "OpeningPercentage": 45,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗5",
+          "IsActive": true,
+          "OpeningPercentage": 36,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗6",
+          "IsActive": true,
+          "OpeningPercentage": 70,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗7",
+          "IsActive": true,
+          "OpeningPercentage": 62,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "纵向风窗1",
+          "IsActive": true,
+          "OpeningPercentage": 50,
+          "AirInletMode": 0,
+          "AirInletType": 0
+        },
+        {
+          "Name": "纵向风窗2",
+          "IsActive": true,
+          "OpeningPercentage": 55,
+          "AirInletMode": 0,
+          "AirInletType": 0
+        },
+        {
+          "Name": "纵向风窗3",
+          "IsActive": true,
+          "OpeningPercentage": 45,
+          "AirInletMode": 0,
+          "AirInletType": 0
+        },
+        {
+          "Name": "纵向风窗4",
+          "IsActive": true,
+          "OpeningPercentage": 80,
+          "AirInletMode": 0,
+          "AirInletType": 0
+        }
+      ]
+    },
+    {
+      "VentId": 3,
+      "LevelName": "档位3",
+      "VentilationMode": 0,
+      "AirInletList": [
+        {
+          "Name": "风窗1",
+          "IsActive": true,
+          "OpeningPercentage": 40,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗2",
+          "IsActive": true,
+          "OpeningPercentage": 20,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗3",
+          "IsActive": true,
+          "OpeningPercentage": 22,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗4",
+          "IsActive": true,
+          "OpeningPercentage": 12,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗5",
+          "IsActive": true,
+          "OpeningPercentage": 39,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗6",
+          "IsActive": true,
+          "OpeningPercentage": 46,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗7",
+          "IsActive": true,
+          "OpeningPercentage": 23,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "纵向风窗1",
+          "IsActive": true,
+          "OpeningPercentage": 34,
+          "AirInletMode": 0,
+          "AirInletType": 0
+        },
+        {
+          "Name": "纵向风窗2",
+          "IsActive": true,
+          "OpeningPercentage": 58,
+          "AirInletMode": 0,
+          "AirInletType": 0
+        },
+        {
+          "Name": "纵向风窗3",
+          "IsActive": true,
+          "OpeningPercentage": 64,
+          "AirInletMode": 0,
+          "AirInletType": 0
+        },
+        {
+          "Name": "纵向风窗4",
+          "IsActive": true,
+          "OpeningPercentage": 32,
+          "AirInletMode": 0,
+          "AirInletType": 0
+        }
+      ]
+    },
+    {
+      "VentId": 1,
+      "LevelName": "档位1",
+      "VentilationMode": 1,
+      "AirInletList": [
+        {
+          "Name": "风窗1",
+          "IsActive": true,
+          "OpeningPercentage": 10,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗2",
+          "IsActive": true,
+          "OpeningPercentage": 12,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗3",
+          "IsActive": true,
+          "OpeningPercentage": 15,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗4",
+          "IsActive": true,
+          "OpeningPercentage": 19,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗5",
+          "IsActive": true,
+          "OpeningPercentage": 23,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗6",
+          "IsActive": true,
+          "OpeningPercentage": 25,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗7",
+          "IsActive": true,
+          "OpeningPercentage": 27,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "纵向风窗1",
+          "IsActive": true,
+          "OpeningPercentage": 32,
+          "AirInletMode": 0,
+          "AirInletType": 0
+        },
+        {
+          "Name": "纵向风窗2",
+          "IsActive": true,
+          "OpeningPercentage": 38,
+          "AirInletMode": 0,
+          "AirInletType": 0
+        },
+        {
+          "Name": "纵向风窗3",
+          "IsActive": true,
+          "OpeningPercentage": 45,
+          "AirInletMode": 0,
+          "AirInletType": 0
+        },
+        {
+          "Name": "纵向风窗4",
+          "IsActive": true,
+          "OpeningPercentage": 55,
+          "AirInletMode": 0,
+          "AirInletType": 0
+        }
+      ]
+    },
+    {
+      "VentId": 2,
+      "LevelName": "档位2",
+      "VentilationMode": 1,
+      "AirInletList": [
+        {
+          "Name": "风窗1",
+          "IsActive": true,
+          "OpeningPercentage": 21,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗2",
+          "IsActive": true,
+          "OpeningPercentage": 26,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗3",
+          "IsActive": true,
+          "OpeningPercentage": 30,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗4",
+          "IsActive": true,
+          "OpeningPercentage": 32,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗5",
+          "IsActive": true,
+          "OpeningPercentage": 38,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗6",
+          "IsActive": true,
+          "OpeningPercentage": 42,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "风窗7",
+          "IsActive": true,
+          "OpeningPercentage": 48,
+          "AirInletMode": 0,
+          "AirInletType": 1
+        },
+        {
+          "Name": "纵向风窗1",
+          "IsActive": true,
+          "OpeningPercentage": 51,
+          "AirInletMode": 0,
+          "AirInletType": 0
+        },
+        {
+          "Name": "纵向风窗2",
+          "IsActive": true,
+          "OpeningPercentage": 57,
+          "AirInletMode": 0,
+          "AirInletType": 0
+        },
+        {
+          "Name": "纵向风窗3",
+          "IsActive": true,
+          "OpeningPercentage": 60,
+          "AirInletMode": 0,
+          "AirInletType": 0
+        },
+        {
+          "Name": "纵向风窗4",
+          "IsActive": true,
+          "OpeningPercentage": 65,
+          "AirInletMode": 0,
+          "AirInletType": 0
+        }
+      ]
+    }
+  ],
+  "NegativePressureConfig": {
+    "TVPressureConfig": {
+      "IsActive": true,
+      "PressureUnit": 0,
+      "PressureHysteresis": 2.0,
+      "DelayTime": 2,
+      "PerformanceMode": 1,
+      "LowTemp": 2.0,
+      "LowTempPressure": 5.0,
+      "HighTemp": 20.0,
+      "HighTempPressure": 22.0
+    },
+    "LVPressureConfig": {
+      "IsActive": true,
+      "PressureUnit": 1,
+      "PressureHysteresis": 2.0,
+      "DelayTime": 2,
+      "TargetPressure": 1.5
+    }
+  },
+  "DayAgeTemperatureCurve": [
+    {
+      "DayAge": 0,
+      "TargetTemperature": 0.0,
+      "ComfortTemperature": 0.0,
+      "LowAlarmTemperature": 0.0,
+      "UpperAlarmTemperature": 0.0,
+      "LongUpperAlarmTemperature": 0.0,
+      "StartHeatingTemperature": 0.0,
+      "StartLongWindTemperature": 0.0,
+      "StartRefrigerationTemperature": 0.0
+    },
+    {
+      "DayAge": 1,
+      "TargetTemperature": 30.0,
+      "ComfortTemperature": 2.0,
+      "LowAlarmTemperature": 25.0,
+      "UpperAlarmTemperature": 32.5,
+      "LongUpperAlarmTemperature": 33.5,
+      "StartHeatingTemperature": 24.0,
+      "StartLongWindTemperature": 34.0,
+      "StartRefrigerationTemperature": 33.0
+    }
+  ],
+  "SensorAlarmConfig": {
+    "InDoorAvgTempRange": {
+      "IsActive": true,
+      "UpperLimit": 2
+    },
+    "TempSensorRange": {
+      "IsActive": true,
+      "TimeDimension": 200,
+      "UpperLimit": 2
+    },
+    "Humidity": {
+      "IsActive": true,
+      "UpperLimit": 95,
+      "LowerLimit": 50
+    },
+    "CO2Concentration": {
+      "IsActive": true,
+      "UpperLimit": 552,
+      "LowerLimit": 116
+    },
+    "NH3Concentration": {
+      "IsActive": true,
+      "UpperLimit": 20
+    },
+    "BasicVentNegativePressure": {
+      "IsActive": true,
+      "UpperLimitPa": 10,
+      "LowerLimitPa": 2,
+      "UpperLimitInH2O": 0.0416,
+      "LowerLimitinH2O": 0.00832
+    },
+    "LongVentNegativePressure": {
+      "IsActive": true,
+      "UpperLimitPa": 12,
+      "LowerLimitPa": 1,
+      "UpperLimitInH2O": 0.04992,
+      "LowerLimitinH2O": 0.00416
+    },
+    "InletWaterTemp": {
+      "IsActive": true,
+      "UpperLimit": 80,
+      "LowerLimit": 5
+    },
+    "ReturnWaterTemp": {
+      "IsActive": true,
+      "UpperLimit": 50,
+      "LowerLimit": 2
+    },
+    "Lumeter": {
+      "IsActive": true,
+      "UpperLimit": 30000,
+      "LowerLimit": 1200
+    }
+  },
+  "BreedingInformationConfig": {
+    "BreedingMode": 0,
+    "SecurityLevel": 0,
+    "DayAgeUpdateTime": "09:47"
+  },
+  "AlarmSettingsConfig": {
+    "AlarmSuspend": {
+      "AlarmSuspendDuration": 5
+    },
+    "GeneralAlarm": {
+      "IsActive": true,
+      "GeneralAlarmDelayed": 3
+    },
+    "EmergencyAlarm": {
+      "IsActive": true,
+      "EmergencyAlarmDelayed": 10
+    },
+    "AlarmTesting": {
+      "IsActive": true,
+      "TestingDuration": 10,
+      "TestingTime1": "10:00",
+      "TestingTime2": "15:00",
+      "TestingTime3": "20:00",
+      "Cycles": [
+        2,
+        4,
+        6
+      ]
+    }
+  },
+  "FanUnitSettingsConfig": [
+    {
+      "Name": "风机组1",
+      "TotalAirVolume": 10000,
+      "FanSettings": [
+        {
+          "Name": "风机1",
+          "FanInfo": {
+            "Code": "01-01",
+            "Manufacturer": "山东博风风机有限公司",
+            "Brand": "博风",
+            "Model": "K40",
+            "AirVolume": 5000
+          }
+        },
+        {
+          "Name": "风机2",
+          "FanInfo": {
+            "Code": "01-02",
+            "Manufacturer": "青岛鲁东风机有限公司",
+            "Brand": "鲁东",
+            "Model": "YZFY-I",
+            "AirVolume": 5000
+          }
+        },
+        {
+          "Name": "风机3",
+          "FanInfo": null
+        },
+        {
+          "Name": "风机4",
+          "FanInfo": null
+        },
+        {
+          "Name": "风机5",
+          "FanInfo": null
+        },
+        {
+          "Name": "风机6",
+          "FanInfo": null
+        }
+      ]
+    },
+    {
+      "Name": "风机组2",
+      "TotalAirVolume": 9700,
+      "FanSettings": [
+        {
+          "Name": "风机1",
+          "FanInfo": {
+            "Code": "02-01",
+            "Manufacturer": "青岛鲁东风机有限公司",
+            "Brand": "鲁东",
+            "Model": "LDWD-I",
+            "AirVolume": 4500
+          }
+        },
+        {
+          "Name": "风机2",
+          "FanInfo": null
+        },
+        {
+          "Name": "风机3",
+          "FanInfo": {
+            "Code": "02-03",
+            "Manufacturer": "山东艾科空调设备有限公司",
+            "Brand": "艾科",
+            "Model": "DWEX-I",
+            "AirVolume": 2200
+          }
+        },
+        {
+          "Name": "风机4",
+          "FanInfo": {
+            "Code": "02-04",
+            "Manufacturer": "山东艾科空调设备有限公司",
+            "Brand": "艾科",
+            "Model": "DWEX-II",
+            "AirVolume": 3000
+          }
+        },
+        {
+          "Name": "风机5",
+          "FanInfo": null
+        },
+        {
+          "Name": "风机6",
+          "FanInfo": null
+        }
+      ]
+    },
+    {
+      "Name": "风机组3",
+      "TotalAirVolume": 0,
+      "FanSettings": [
+        {
+          "Name": "风机1",
+          "FanInfo": null
+        },
+        {
+          "Name": "风机2",
+          "FanInfo": null
+        },
+        {
+          "Name": "风机3",
+          "FanInfo": null
+        },
+        {
+          "Name": "风机4",
+          "FanInfo": null
+        },
+        {
+          "Name": "风机5",
+          "FanInfo": null
+        },
+        {
+          "Name": "风机6",
+          "FanInfo": null
+        }
+      ]
+    },
+    {
+      "Name": "风机组4",
+      "TotalAirVolume": 0,
+      "FanSettings": [
+        {
+          "Name": "风机1",
+          "FanInfo": null
+        },
+        {
+          "Name": "风机2",
+          "FanInfo": null
+        },
+        {
+          "Name": "风机3",
+          "FanInfo": null
+        },
+        {
+          "Name": "风机4",
+          "FanInfo": null
+        },
+        {
+          "Name": "风机5",
+          "FanInfo": null
+        },
+        {
+          "Name": "风机6",
+          "FanInfo": null
+        }
+      ]
+    },
+    {
+      "Name": "风机组5",
+      "TotalAirVolume": 0,
+      "FanSettings": [
+        {
+          "Name": "风机1",
+          "FanInfo": null
+        },
+        {
+          "Name": "风机2",
+          "FanInfo": null
+        },
+        {
+          "Name": "风机3",
+          "FanInfo": null
+        },
+        {
+          "Name": "风机4",
+          "FanInfo": null
+        },
+        {
+          "Name": "风机5",
+          "FanInfo": null
+        },
+        {
+          "Name": "风机6",
+          "FanInfo": null
+        }
+      ]
+    },
+    {
+      "Name": "风机组6",
+      "TotalAirVolume": 0,
+      "FanSettings": [
+        {
+          "Name": "风机1",
+          "FanInfo": null
+        },
+        {
+          "Name": "风机2",
+          "FanInfo": null
+        },
+        {
+          "Name": "风机3",
+          "FanInfo": null
+        },
+        {
+          "Name": "风机4",
+          "FanInfo": null
+        },
+        {
+          "Name": "风机5",
+          "FanInfo": null
+        },
+        {
+          "Name": "风机6",
+          "FanInfo": null
+        }
+      ]
+    }
+  ],
+  "TemperatureCorrelation": {
+    "OutdoorTemp": [
+      "温度1"
+    ],
+    "IndoorTemp": [
+      "温度2"
+    ],
+    "Others": [
+      {
+        "Label": "湿帘1",
+        "Value": [
+          "温度3"
+        ]
+      },
+      {
+        "Label": "搅拌风机1",
+        "Value": [
+          "温度2"
+        ]
+      },
+      {
+        "Label": "风窗2",
+        "Value": [
+          "温度2"
+        ]
+      }
+    ]
+  },
+  "EnclosureStructureConfig": {
+    "Length": 20.0,
+    "Width": 10.0,
+    "Height": 15.0,
+    "EavesHeight": 12.0
+  },
+  "FanModelConfig": [
+    {
+      "Manufacturer": "山东艾科空调设备有限公司",
+      "Brand": "艾科",
+      "Models": [
+        {
+          "Name": "DWEX-I",
+          "AirVolume": 2200
+        },
+        {
+          "Name": "DWEX-II",
+          "AirVolume": 3000
+        }
+      ]
+    },
+    {
+      "Manufacturer": "青岛鲁东风机有限公司",
+      "Brand": "鲁东",
+      "Models": [
+        {
+          "Name": "LDWD-I",
+          "AirVolume": 4500
+        },
+        {
+          "Name": "LDWD-II",
+          "AirVolume": 6000
+        },
+        {
+          "Name": "YZFY-I",
+          "AirVolume": 5000
+        },
+        {
+          "Name": "YZFY-II",
+          "AirVolume": 5500
+        },
+        {
+          "Name": "BLGFY-1460",
+          "AirVolume": 6000
+        },
+        {
+          "Name": "BLGFY-1560",
+          "AirVolume": 8000
+        },
+        {
+          "Name": "SLLFJ-I",
+          "AirVolume": 9000
+        }
+      ]
+    },
+    {
+      "Manufacturer": "山东博风风机有限公司",
+      "Brand": "博风",
+      "Models": [
+        {
+          "Name": "K40",
+          "AirVolume": 5000
+        }
+      ]
+    },
+    {
+      "Manufacturer": "绍兴上虞英达风机有限公司",
+      "Brand": "英达",
+      "Models": [
+        {
+          "Name": "WEXD-I",
+          "AirVolume": 6000
+        }
+      ]
+    }
+  ],
+  "AlarmSMSNotification": {
+    "Frequency": 120,
+    "PhoneNoInfos": [
+      {
+        "PhoneNumber": "15369874256",
+        "IsActive": true
+      },
+      {
+        "PhoneNumber": "18564858947",
+        "IsActive": false
+      },
+      {
+        "PhoneNumber": "18698714582",
+        "IsActive": false
+      }
+    ]
+  },
+  "EmergencyAlarmSMSNotification": {
+    "Frequency": 30,
+    "PhoneNoInfos": [
+      {
+        "PhoneNumber": "15159874213",
+        "IsActive": true
+      },
+      {
+        "PhoneNumber": "18564858947",
+        "IsActive": false
+      },
+      {
+        "PhoneNumber": "18698714582",
+        "IsActive": false
+      }
+    ]
+  },
+  "VisualizationSetting": {
+    "VisualizationPosition": 0,
+    "Row": 10,
+    "Column": 9,
+    "EquPositions": [
+      {
+        "Row": 1,
+        "Column": 1,
+        "UnitName": "风机组1",
+        "EquName": "风机01-01"
+      },
+      {
+        "Row": 3,
+        "Column": 6,
+        "UnitName": "风机组1",
+        "EquName": "风机01-02"
+      },
+      {
+        "Row": 9,
+        "Column": 8,
+        "UnitName": "风机组1",
+        "EquName": "风机01-03"
+      }
+    ]
+  }
+}

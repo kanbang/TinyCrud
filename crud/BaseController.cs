@@ -8,7 +8,7 @@ namespace CRUD
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class BaseController<TDto, TEntity, TCreateDto, TUpdateDto, TFilterDto> : ControllerBase
+    public abstract class BaseController<TDto, TEntity, TCreateDto, TUpdateDto, TFilterDto> : ControllerBase
         where TDto : class, IBaseDto
         where TEntity : class, IBaseEntity
         where TCreateDto : class

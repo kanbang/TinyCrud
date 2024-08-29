@@ -1,0 +1,31 @@
+{
+  "DayAgeWeatherCurve": [
+    {
+      "DayAge": 22,
+      "HumidityHeatCompCoefficient": 0.1,
+      "AirCoolingCompCoefficient": 0.12,
+      "CO2UpperLimit": 2000,
+      "CO2LowerLimit": 400,
+      "NH3UpperLimit": 1500,
+      "HeatStressIndex": 1.01,
+      "TargetHumidity": 50.1
+    },
+    {
+      "DayAge": 2,
+      "HumidityHeatCompCoefficient": 0.12,
+      "AirCoolingCompCoefficient": 0.21,
+      "CO2UpperLimit": 2100,
+      "CO2LowerLimit": 420,
+      "NH3UpperLimit": 1530,
+      "HeatStressIndex": 1.21,
+      "TargetHumidity": 49.2
+    }
+  ],
+  "DayAgeRespiratoryCapacityCurve": null,
+  "DayAgeWeightCurve": null,
+  "WetCurtainConfig": null,
+  "ApparentTemperatureConfig": null,
+  "HeatStressIndexConfig": null,
+  "WaterLineConfig": null,
+  "FeedConfig": null
+}

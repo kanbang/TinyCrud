@@ -33,12 +33,14 @@ builder.Services.AddCrudServices();
 
 // });
 
-builder.Services.AddSingleton<IJsonFileService<JsonClass>>(sp =>
-      new JsonFileService<JsonClass>("settings.json"));
+builder.Services.AddSingleton<IJsonFileService<IotConfig>>(sp =>
+      new JsonFileService<IotConfig>("iot_config.json"));
 
 
 // 添加控制器
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddNewtonsoftJson();
+
+        
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
